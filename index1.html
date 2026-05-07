@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jung Shin Hapkido | Self-Defence Classes Alstonville NSW</title>
+  <meta name="description" content="Learn real self-defence with Jung Shin Hapkido in Alstonville. Classes for high school students and adults. First class free. Wednesday nights 5:30pm.">
+  <meta name="keywords" content="Hapkido, self-defence, Alstonville, martial arts, Korean martial arts, adult classes, joint locks, free trial">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --black: #0a0a0a;
+      --black-mid: #111111;
+      --black-soft: #1c1c1c;
+      --gold: #c9a227;
+      --gold-light: #e8c547;
+      --gold-dim: rgba(201,162,39,0.15);
+      --white: #f4f1eb;
+      --grey: #888880;
+      --grey-light: #ccc9c0;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Crimson Pro', Georgia, serif;
+      background: var(--black);
+      color: var(--white);
+      overflow-x: hidden;
+      font-size: 18px;
+      line-height: 1.75;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 40px;
+      background: rgba(10,10,10,0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--gold-dim);
+    }
+    .nav-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .nav-brand img { width: 44px; height: 44px; border-radius: 50%; }
+    .nav-brand-text { font-family: 'Cinzel', serif; font-size: 0.72rem; font-weight: 700; color: var(--gold); letter-spacing: 0.18em; text-transform: uppercase; line-height: 1.3; }
+    .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+    .nav-links a { font-family: 'Cinzel', serif; font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--grey-light); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta-link { background: var(--gold) !important; color: var(--black) !important; padding: 8px 18px !important; border-radius: 2px; font-weight: 700 !important; }
+    .nav-cta-link:hover { background: var(--gold-light) !important; color: var(--black) !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--gold); transition: all 0.3s; }
+    .mobile-menu { display: none; flex-direction: column; position: fixed; top: 73px; left: 0; right: 0; background: rgba(10,10,10,0.98); border-bottom: 1px solid var(--gold-dim); padding: 24px 40px 32px; gap: 20px; z-index: 999; }
+    .mobile-menu a { font-family: 'Cinzel', serif; font-size: 0.85rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--grey-light); text-decoration: none; padding: 8px 0; border-bottom: 1px solid var(--gold-dim); }
+    .mobile-menu a:last-child { border: none; }
+    .mobile-menu.open { display: flex; }
+
+    /* ── HERO ── */
+    #hero {
+      position: relative; min-height: 100vh;
+      display: flex; align-items: center; overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background-size: cover; background-position: center 30%;
+      filter: brightness(0.3) contrast(1.15);
+      transform: scale(1.06);
+      animation: heroZoom 18s ease-in-out infinite alternate;
+    }
+    @keyframes heroZoom { from { transform: scale(1.06); } to { transform: scale(1.13); } }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(10,10,10,0.9) 0%, rgba(10,10,10,0.55) 60%, rgba(201,162,39,0.06) 100%);
+    }
+    .hero-content {
+      position: relative; z-index: 2;
+      max-width: 1200px; margin: 0 auto;
+      padding: 150px 40px 80px; width: 100%;
+    }
+    .hero-logo {
+      width: 270px;
+      height: 270px; border-radius: 50%;
+      margin-bottom: 28px;
+      filter: drop-shadow(0 0 24px rgba(201,162,39,0.5));
+      animation: fadeDown 0.9s ease both;
+    }
+    @keyframes fadeDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    .hero-eyebrow {
+      font-family: 'Cinzel', serif; font-size: 0.72rem;
+      letter-spacing: 0.32em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 14px;
+      animation: fadeUp 0.9s 0.15s ease both;
+    }
+    h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3.8rem, 9vw, 8.5rem);
+      line-height: 0.9; color: var(--gold);
+      letter-spacing: 0.02em; margin-bottom: 20px;
+      animation: fadeUp 0.9s 0.25s ease both;
+    }
+    h1 .h1-sub { display: block; color: var(--white); font-size: 0.52em; letter-spacing: 0.06em; margin-top: 6px; }
+    .hero-desc {
+      font-size: 1.2rem; color: var(--grey-light);
+      max-width: 540px; margin-bottom: 40px;
+      animation: fadeUp 0.9s 0.35s ease both;
+    }
+    .btn-group { display: flex; gap: 16px; flex-wrap: wrap; animation: fadeUp 0.9s 0.45s ease both; }
+    .btn-gold {
+      display: inline-block; padding: 16px 36px;
+      background: var(--gold); color: var(--black);
+      font-family: 'Cinzel', serif; font-size: 0.78rem;
+      font-weight: 700; letter-spacing: 0.16em;
+      text-transform: uppercase; text-decoration: none;
+      border-radius: 2px; border: 2px solid var(--gold);
+      transition: all 0.22s; cursor: pointer;
+    }
+    .btn-gold:hover { background: var(--gold-light); border-color: var(--gold-light); }
+    .btn-outline {
+      display: inline-block; padding: 16px 36px;
+      background: transparent; color: var(--white);
+      font-family: 'Cinzel', serif; font-size: 0.78rem;
+      font-weight: 600; letter-spacing: 0.16em;
+      text-transform: uppercase; text-decoration: none;
+      border-radius: 2px; border: 2px solid rgba(255,255,255,0.5);
+      transition: all 0.22s; cursor: pointer;
+    }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+    .hero-scroll {
+      position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
+      z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 8px;
+      font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--grey); animation: bounceDown 2s infinite;
+    }
+    @keyframes bounceDown { 0%,100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(8px); } }
+    .scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, var(--gold), transparent); }
+
+    /* ── SECTION BASES ── */
+    section { padding: 100px 40px; }
+    .container { max-width: 1160px; margin: 0 auto; }
+    h2 {
+      font-family: 'Cinzel', serif; color: var(--gold);
+      font-size: clamp(1.6rem, 4vw, 2.6rem);
+      font-weight: 700; letter-spacing: 0.06em;
+      margin-bottom: 16px; text-transform: uppercase;
+    }
+    h3 { font-family: 'Cinzel', serif; font-size: 1rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
+    .section-label {
+      font-family: 'Cinzel', serif; font-size: 0.65rem;
+      letter-spacing: 0.3em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 10px; display: block;
+    }
+    .gold-rule { width: 60px; height: 2px; background: var(--gold); margin: 20px 0 40px; }
+    .gold-rule.center { margin-left: auto; margin-right: auto; }
+
+    /* ── WHAT IS HAPKIDO ── */
+    #principles { background: var(--black-soft); }
+    .principles-intro { max-width: 640px; margin-bottom: 64px; }
+    .principles-intro p { color: var(--grey-light); font-size: 1.1rem; }
+    .principles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+    .principle-card {
+      background: var(--black-mid);
+      padding: 48px 36px;
+      position: relative; overflow: hidden;
+      border-top: 3px solid transparent;
+      transition: border-color 0.3s;
+    }
+    .principle-card:hover { border-color: var(--gold); }
+    .principle-icon {
+      font-size: 2.8rem; margin-bottom: 24px;
+      display: block;
+    }
+    .principle-card h3 { color: var(--gold); margin-bottom: 16px; font-size: 0.9rem; }
+    .principle-card p { color: var(--grey-light); font-size: 1rem; line-height: 1.7; }
+    .principle-number {
+      position: absolute; top: 20px; right: 24px;
+      font-family: 'Bebas Neue', sans-serif; font-size: 4rem;
+      color: rgba(201,162,39,0.06); line-height: 1;
+    }
+
+    /* ── WHAT WE TEACH ── */
+    #curriculum { background: var(--black); }
+    .belts-section { margin: 48px 0 64px; }
+    .belts-label { font-family: 'Cinzel', serif; font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--grey); margin-bottom: 20px; display: block; }
+    .belt-track {
+      display: flex; align-items: center; gap: 0;
+      overflow-x: auto; padding-bottom: 8px;
+    }
+    .belt-item {
+      display: flex; flex-direction: column; align-items: center;
+      gap: 8px; min-width: 90px; padding: 0 4px;
+    }
+    .belt-swatch {
+      width: 54px; height: 16px; border-radius: 2px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    }
+    .belt-name { font-family: 'Cinzel', serif; font-size: 0.55rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--grey-light); text-align: center; }
+    .belt-arrow { color: var(--gold); font-size: 0.9rem; min-width: 16px; text-align: center; }
+    .curriculum-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
+      margin-top: 8px;
+    }
+    .curr-tile {
+      background: var(--black-soft);
+      padding: 32px 28px;
+      border-left: 3px solid var(--gold-dim);
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .curr-tile:hover { border-left-color: var(--gold); background: #1e1e1e; }
+    .curr-tile-icon { font-size: 1.8rem; margin-bottom: 12px; display: block; }
+    .curr-tile h3 { color: var(--white); font-size: 0.8rem; margin-bottom: 8px; }
+    .curr-tile p { color: var(--grey); font-size: 0.92rem; line-height: 1.6; }
+
+    /* ── INSTRUCTOR ── */
+    #instructor { background: var(--black-soft); }
+    .instructor-inner {
+      display: grid; grid-template-columns: 1fr 1.4fr; gap: 80px; align-items: center;
+    }
+    .instructor-photo-wrap {
+      position: relative;
+    }
+    .instructor-photo-wrap::before {
+      content: '';
+      position: absolute; top: 20px; left: 20px; right: -20px; bottom: -20px;
+      border: 2px solid var(--gold-dim); border-radius: 2px;
+    }
+    .instructor-photo {
+      width: 100%; aspect-ratio: 3/4;
+      object-fit: cover; object-position: center top;
+      display: block; position: relative; z-index: 1;
+      filter: grayscale(20%) contrast(1.05);
+    }
+    .instructor-bio h2 { margin-bottom: 8px; }
+    .instructor-rank {
+      font-family: 'Cinzel', serif; font-size: 0.75rem;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 24px; display: block;
+    }
+    .instructor-bio p { color: var(--grey-light); font-size: 1.05rem; margin-bottom: 16px; }
+    .instructor-bio p:last-child { margin-bottom: 0; }
+    .credential-list { list-style: none; margin: 24px 0; }
+    .credential-list li {
+      display: flex; align-items: flex-start; gap: 12px;
+      color: var(--grey-light); font-size: 0.95rem;
+      padding: 8px 0; border-bottom: 1px solid var(--gold-dim);
+    }
+    .credential-list li:last-child { border-bottom: none; }
+    .cred-dot { color: var(--gold); font-size: 1.2rem; line-height: 1.4; flex-shrink: 0; }
+
+    /* ── SCHEDULE ── */
+    #schedule { background: var(--black); }
+    .schedule-inner {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;
+    }
+    .schedule-details { display: flex; flex-direction: column; gap: 8px; margin: 40px 0; }
+    .schedule-item {
+      display: flex; align-items: center; gap: 20px;
+      padding: 24px 28px;
+      background: var(--black-soft);
+      border-left: 3px solid var(--gold);
+    }
+    .schedule-icon { font-size: 1.6rem; flex-shrink: 0; }
+    .schedule-label { font-family: 'Cinzel', serif; font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); }
+    .schedule-value { font-size: 1.05rem; color: var(--white); }
+    .free-badge {
+      display: inline-block;
+      background: var(--gold); color: var(--black);
+      font-family: 'Cinzel', serif; font-size: 0.7rem;
+      font-weight: 700; letter-spacing: 0.1em;
+      padding: 4px 14px; border-radius: 2px; margin-left: 10px;
+    }
+    .map-container {
+      width: 100%; height: 380px;
+      border: 2px solid var(--gold-dim);
+      overflow: hidden;
+    }
+    .map-container iframe { width: 100%; height: 100%; border: none; filter: grayscale(30%) contrast(1.1); }
+
+    /* ── GALLERY ── */
+    #gallery { background: var(--black-soft); padding: 80px 0; }
+    .gallery-heading { padding: 0 40px; margin-bottom: 40px; }
+    .gallery-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px;
+    }
+    .gallery-item {
+      aspect-ratio: 1/1;
+      overflow: hidden;
+      position: relative;
+    }
+    .gallery-item img {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center;
+      transition: transform 0.5s ease;
+      filter: grayscale(15%);
+    }
+    .gallery-item:hover img { transform: scale(1.06); filter: grayscale(0%); }
+    .gallery-item .overlay {
+      position: absolute; inset: 0;
+      background: rgba(10,10,10,0.55);
+      opacity: 0; transition: opacity 0.3s;
+    }
+    .gallery-item:hover .overlay { opacity: 1; }
+
+    /* ── TESTIMONIALS ── */
+    #testimonials { background: var(--black); }
+    .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 48px; }
+    .testi-card {
+      background: var(--black-soft);
+      padding: 40px 32px;
+      border-top: 3px solid var(--gold-dim);
+      position: relative;
+      transition: border-color 0.3s;
+    }
+    .testi-card:hover { border-top-color: var(--gold); }
+    .testi-quote {
+      font-size: 3.5rem; line-height: 1; color: var(--gold);
+      font-family: 'Cinzel', serif; margin-bottom: 12px;
+      opacity: 0.6;
+    }
+    .testi-text {
+      font-size: 1.05rem; color: var(--grey-light);
+      font-style: italic; line-height: 1.75; margin-bottom: 24px;
+    }
+    .testi-attribution { font-family: 'Cinzel', serif; font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; }
+    .testi-name { color: var(--gold); }
+    .testi-belt { color: var(--grey); }
+
+    /* ── CONTACT / FORM ── */
+    #contact { background: var(--black-soft); }
+    .contact-inner { display: grid; grid-template-columns: 1.1fr 1fr; gap: 80px; align-items: start; }
+    .form-wrap { }
+    .form-wrap form { display: flex; flex-direction: column; gap: 16px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-field { display: flex; flex-direction: column; gap: 6px; }
+    .form-field label {
+      font-family: 'Cinzel', serif; font-size: 0.62rem;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--grey-light);
+    }
+    .form-field input, .form-field textarea, .form-field select {
+      background: var(--black);
+      border: 1px solid rgba(201,162,39,0.3);
+      color: var(--white);
+      font-family: 'Crimson Pro', serif; font-size: 1rem;
+      padding: 12px 16px; border-radius: 2px;
+      outline: none; width: 100%;
+      transition: border-color 0.2s;
+    }
+    .form-field input:focus, .form-field textarea:focus { border-color: var(--gold); }
+    .form-field textarea { min-height: 110px; resize: vertical; }
+    .btn-submit {
+      display: block; width: 100%;
+      padding: 18px;
+      background: var(--gold); color: var(--black);
+      font-family: 'Cinzel', serif; font-size: 0.82rem;
+      font-weight: 700; letter-spacing: 0.18em;
+      text-transform: uppercase;
+      border: none; border-radius: 2px; cursor: pointer;
+      transition: background 0.2s;
+      margin-top: 8px;
+    }
+    .btn-submit:hover { background: var(--gold-light); }
+    .contact-info { }
+    .contact-info h2 { margin-bottom: 8px; }
+    .contact-info > p { color: var(--grey-light); margin-bottom: 40px; }
+    .contact-detail {
+      display: flex; align-items: flex-start; gap: 16px;
+      padding: 20px 0; border-bottom: 1px solid var(--gold-dim);
+    }
+    .contact-detail:last-of-type { border-bottom: none; }
+    .contact-detail-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 2px; }
+    .contact-detail-text .label { font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 2px; }
+    .contact-detail-text a, .contact-detail-text span { color: var(--white); font-size: 1.05rem; text-decoration: none; }
+    .contact-detail-text a:hover { color: var(--gold); }
+    .social-row { margin-top: 36px; display: flex; align-items: center; gap: 24px; }
+    .social-row img { width: 90px; height: 90px; border-radius: 8px; }
+    .social-row p { font-size: 0.95rem; color: var(--grey-light); }
+    .form-success {
+      display: none; padding: 20px; background: rgba(201,162,39,0.1);
+      border: 1px solid var(--gold); border-radius: 2px;
+      color: var(--gold); font-family: 'Cinzel', serif;
+      font-size: 0.8rem; letter-spacing: 0.1em; text-align: center;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #050505;
+      border-top: 1px solid var(--gold-dim);
+      padding: 60px 40px 40px;
+      text-align: center;
+    }
+    footer img { width: 80px; height: 80px; border-radius: 50%; margin-bottom: 20px; opacity: 0.9; }
+    .footer-tagline {
+      font-family: 'Cinzel', serif; font-size: 0.72rem;
+      letter-spacing: 0.35em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 32px;
+    }
+    .footer-links { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; margin-bottom: 32px; }
+    .footer-links a { font-family: 'Cinzel', serif; font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--grey); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-copy { font-size: 0.82rem; color: var(--grey); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 14px 24px; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      section { padding: 72px 24px; }
+      .hero-content { padding: 130px 24px 60px; }
+      .principles-grid { grid-template-columns: 1fr; gap: 2px; }
+      .curriculum-grid { grid-template-columns: 1fr 1fr; gap: 2px; }
+      .instructor-inner { grid-template-columns: 1fr; gap: 48px; }
+      .instructor-photo-wrap::before { display: none; }
+      .instructor-photo { aspect-ratio: 4/3; }
+      .schedule-inner { grid-template-columns: 1fr; gap: 40px; }
+      .gallery-strip { grid-template-columns: repeat(2, 1fr); }
+      .testi-grid { grid-template-columns: 1fr; }
+      .contact-inner { grid-template-columns: 1fr; gap: 48px; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      h1 { font-size: 3.2rem; }
+      .btn-group { flex-direction: column; }
+      .btn-gold, .btn-outline { text-align: center; }
+      .curriculum-grid { grid-template-columns: 1fr; }
+      .gallery-strip { grid-template-columns: 1fr 1fr; }
+      .belt-track { gap: 0; }
+      .belt-item { min-width: 70px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <a href="#hero" class="nav-brand">
+    <img src="images/logo.png" alt="Jung Shin Hapkido logo">
+    <span class="nav-brand-text">Jung Shin<br>Hapkido</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#principles">What is Hapkido</a></li>
+    <li><a href="#curriculum">What We Teach</a></li>
+    <li><a href="#instructor">Instructor</a></li>
+    <li><a href="#schedule">Schedule</a></li>
+    <li><a href="#contact" class="nav-cta-link">Free Trial</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#principles" onclick="closeMobile()">What is Hapkido</a>
+  <a href="#curriculum" onclick="closeMobile()">What We Teach</a>
+  <a href="#instructor" onclick="closeMobile()">Instructor</a>
+  <a href="#schedule" onclick="closeMobile()">Schedule &amp; Location</a>
+  <a href="#contact" onclick="closeMobile()">Book Free Trial</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg" style="background-image: url('images/hero.JPG');"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <img src="images/logo.png" alt="Jung Shin Hapkido circular logo" class="hero-logo">
+    <p class="hero-eyebrow">Korean Martial Arts · Alstonville NSW</p>
+    <h1>
+      Protect What<br>Matters.
+      <span class="h1-sub">Real Self-Defence. Real Skills.</span>
+    </h1>
+    <p class="hero-desc">Hapkido self-defence classes for high school students and adults in Alstonville, NSW. Build practical skills, real confidence, and a community that pushes you forward.</p>
+    <div class="btn-group">
+      <a href="#contact" class="btn-gold">Book Your Free Trial</a>
+      <a href="#principles" class="btn-outline">Learn More</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- WHAT IS HAPKIDO -->
+<section id="principles">
+  <div class="container">
+    <div class="principles-intro">
+      <span class="section-label">The Art of Redirection</span>
+      <h2>What is Hapkido?</h2>
+      <div class="gold-rule"></div>
+      <p>Hapkido is a Korean martial art built on three core principles. Rather than meeting force with force, a Hapkidoist redirects, flows, and adapts — making it highly effective regardless of your size or strength. It is a complete self-defence system covering striking, joint locks, throws, and ground defence.</p>
+    </div>
+    <div class="principles-grid">
+      <div class="principle-card">
+        <span class="principle-number">01</span>
+        <span class="principle-icon">⭕</span>
+        <h3>Circular Motion</h3>
+        <p>Many Hapkido techniques use flowing circular movements — found in strikes, holds, takedowns, and throws. Circular motion allows a smaller practitioner to redirect and control a larger attacker, using less force to achieve greater effect.</p>
+      </div>
+      <div class="principle-card">
+        <span class="principle-number">02</span>
+        <span class="principle-icon">🌊</span>
+        <h3>Non-Resistance</h3>
+        <p>In Hapkido, an attack is rarely met head-on. Rather than power against power, a Hapkidoist deflects, absorbs, or joins an opponent's force — then redirects it back against them. Your attacker's strength becomes your advantage.</p>
+      </div>
+      <div class="principle-card">
+        <span class="principle-number">03</span>
+        <span class="principle-icon">💧</span>
+        <h3>Water Theory</h3>
+        <p>Water always finds the flaw in a vessel, exerting constant pressure until it prevails. In Hapkido, constant movement, varied rhythm, and adaptability overwhelm any opponent — just as flowing water wears through stone over time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE TEACH -->
+<section id="curriculum">
+  <div class="container">
+    <span class="section-label">A Complete System</span>
+    <h2>From White Belt to Black Belt</h2>
+    <div class="gold-rule"></div>
+    <p style="color: var(--grey-light); max-width: 640px; margin-bottom: 48px;">Jung Shin Hapkido is a structured system. Students progress through a clear belt pathway, building skills progressively with every grading. Each stage introduces new techniques while deepening your understanding of the principles that make Hapkido effective.</p>
+
+    
+    </div>
+
+    <div class="curriculum-grid">
+      <div class="curr-tile">
+        <span class="curr-tile-icon">✊</span>
+        <h3>Strikes &amp; Kicks</h3>
+        <p>A full range of hand strikes and kicks — from basic fundamentals to advanced spinning and jumping techniques developed progressively through each belt level.</p>
+      </div>
+      <div class="curr-tile">
+        <span class="curr-tile-icon">🔒</span>
+        <h3>Joint Locks &amp; Holds</h3>
+        <p>The hallmark of Hapkido. Wrist locks, arm bars, S-locks, V-locks and finger techniques applied to control and restrain an attacker with precision.</p>
+      </div>
+      <div class="curr-tile">
+        <span class="curr-tile-icon">⚡</span>
+        <h3>Throws &amp; Takedowns</h3>
+        <p>Hip throws, shoulder throws, sweeps, whip throws and more — using circular motion and non-resistance to redirect an attacker's momentum to the ground.</p>
+      </div>
+      <div class="curr-tile">
+        <span class="curr-tile-icon">🛡️</span>
+        <h3>Ground Defence</h3>
+        <p>Practical ground-level skills including guard, defensive get-ups, balance breaks, and leg and hand attacks — preparing you for real-world situations.</p>
+      </div>
+      <div class="curr-tile">
+        <span class="curr-tile-icon">⚔️</span>
+        <h3>Weapon Defence</h3>
+        <p>Advanced techniques for defending against stabs, slashes and other armed attacks. Developed at higher belt levels for a complete self-defence education.</p>
+      </div>
+      <div class="curr-tile">
+        <span class="curr-tile-icon">🔄</span>
+        <h3>Lock Flows &amp; Combinations</h3>
+        <p>Flowing sequences that chain techniques together — developing fluency, timing and the ability to adapt when a technique meets resistance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTRUCTOR -->
+<section id="instructor">
+  <div class="container">
+    <div class="instructor-inner">
+      <div class="instructor-photo-wrap">
+        <img src="images/instructor.jpeg" alt="Kwanjung Bernie, Fourth Degree Hapkido instructor, demonstrating a joint lock technique" class="instructor-photo">
+      </div>
+      <div class="instructor-bio">
+        <span class="section-label">About Your Instructor</span>
+        <h2>Trained. Experienced. Committed to Your Growth.</h2>
+        <span class="instructor-rank">Kwanjung Bernie · 4th Degree Black Belt</span>
+        <div class="gold-rule"></div>
+        <p>Kwanjung Bernie has dedicated 35 years to the study of martial arts, in particular, Hapkido. His journey spans decades of training and learning from Masters from Korea, Australia, the US and Canada.</p>
+        <ul class="credential-list">
+          <li><span class="cred-dot">◆</span><span>35 Years of dedicated training and practice and practice</span></li>
+          <li><span class="cred-dot">◆</span><span>Fourth Degree Black Belt
+          
+          <li><span class="cred-dot">◆</span><span>Committed to teaching a curriculum that is structured, safe, and genuinely effective</span></li>
+        </ul>
+        <p>Teaching Hapkido isn't just about passing on techniques — it's about developing people. Every student who walks in the door brings something different, and Kwanjung Bernie's goal is to meet you where you are and help you grow — in skill, in confidence, and in character.</p>
+        <a href="#contact" class="btn-gold" style="margin-top: 32px; display: inline-block;">Train With Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCHEDULE -->
+<section id="schedule">
+  <div class="container">
+    <div class="schedule-inner">
+      <div>
+        <span class="section-label">Come Train With Us</span>
+        <h2>Class Schedule &amp; Location</h2>
+        <div class="gold-rule"></div>
+        <p style="color: var(--grey-light); margin-bottom: 8px;">We train every Wednesday evening at the Alstonville Uniting Church Hall. Your first class is completely free — no obligation, no pressure. Just come along, see how it feels, and meet the group.</p>
+        <div class="schedule-details">
+          <div class="schedule-item">
+            <span class="schedule-icon">📅</span>
+            <div>
+              <div class="schedule-label">When</div>
+              <div class="schedule-value">Wednesdays — 5:30pm</div>
+            </div>
+          </div>
+          <div class="schedule-item">
+            <span class="schedule-icon">📍</span>
+            <div>
+              <div class="schedule-label">Where</div>
+              <div class="schedule-value">Alstonville Uniting Church Hall<br><small style="color: var(--grey);">Entry off Main Street, Alstonville NSW</small></div>
+            </div>
+          </div>
+          <div class="schedule-item">
+            <span class="schedule-icon">🎯</span>
+            <div>
+              <div class="schedule-label">First Class</div>
+              <div class="schedule-value">FREE <span class="free-badge">No Obligation</span></div>
+            </div>
+          </div>
+          <div class="schedule-item">
+            <span class="schedule-icon">👕</span>
+            <div>
+              <div class="schedule-label">What to Bring</div>
+              <div class="schedule-value">Comfortable clothes &amp; bare feet. That's it.</div>
+            </div>
+          </div>
+        </div>
+        <a href="#contact" class="btn-gold">Book Your Free Trial</a>
+      </div>
+      <div>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3538.2!2d153.4350!3d-28.8383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b91a0a0a0a0a0a1%3A0x0!2sAlstonville+Uniting+Church%2C+Main+St%2C+Alstonville+NSW!5e0!3m2!1sen!2sau!4v1680000000000!5m2!1sen!2sau"
+            allowfullscreen loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Alstonville Uniting Church Hall location map">
+          </iframe>
+        </div>
+        <p style="color: var(--grey); font-size: 0.88rem; margin-top: 12px; font-family: 'Cinzel', serif; letter-spacing: 0.08em;">Alstonville Uniting Church Hall, entry via Main Street</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="gallery-heading container">
+    <span class="section-label">Life on the Mats</span>
+    <h2>Life on the Mats</h2>
+    <div class="gold-rule"></div>
+  </div>
+  <div class="gallery-strip">
+    <div class="gallery-item">
+      <img src="images/gallery-1.png" alt="Jung Shin Hapkido students practising joint lock technique at Alstonville dojo">
+      <div class="overlay"></div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/gallery-2.png" alt="Hapkido instructor demonstrating wrist control technique">
+      <div class="overlay"></div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/gallery-3.png" alt="Two Hapkido practitioners training together at Jung Shin Hapkido Alstonville">
+      <div class="overlay"></div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/gallery-4.JPG" alt="Hapkido black belt demonstrating V-lock ground technique on red training mat">
+      <div class="overlay"></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="container">
+    <span class="section-label">What Our Students Say</span>
+    <h2>Real People. Real Progress.</h2>
+    <div class="gold-rule"></div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-quote">"</div>
+        <p class="testi-text">I came in knowing nothing. Within a few months I had real skills and real confidence. The instruction is clear, the group is supportive, and every class I learn something new.</p>
+        <div class="testi-attribution">
+          <span class="testi-name">Mark</span> &nbsp;·&nbsp; <span class="testi-belt">Orange Belt</span>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-quote">"</div>
+        <p class="testi-text">The training is challenging but the people make it — everyone helps each other improve. It's not competitive in a bad way, it's genuinely collaborative. I look forward to every Wednesday.</p>
+        <div class="testi-attribution">
+          <span class="testi-name">Sarah</span> &nbsp;·&nbsp; <span class="testi-belt">Yellow Belt</span>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-quote">"</div>
+        <p class="testi-text">I was looking for something practical — not just sport. This is exactly that. The techniques are grounded in real-world situations and the progression keeps you engaged long-term.</p>
+        <div class="testi-attribution">
+          <span class="testi-name">James</span> &nbsp;·&nbsp; <span class="testi-belt">Green Belt</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="form-wrap">
+        <span class="section-label">Take the First Step</span>
+        <h2>Start Your Journey</h2>
+        <div class="gold-rule"></div>
+        <p style="color: var(--grey-light); margin-bottom: 32px;">Your first class is free. Fill in your details below and we'll be in touch to confirm your visit — no lock-ins, no pressure.</p>
+        <form id="trial-form" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="fname">First Name *</label>
+              <input type="text" id="fname" name="fname" required placeholder="Your first name">
+            </div>
+            <div class="form-field">
+              <label for="lname">Last Name *</label>
+              <input type="text" id="lname" name="lname" required placeholder="Your last name">
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" required placeholder="0400 000 000">
+          </div>
+          <div class="form-field">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required placeholder="you@email.com">
+          </div>
+          <div class="form-field">
+            <label for="age">Age Group (optional)</label>
+            <select id="age" name="age">
+              <option value="">Select age group</option>
+              <option value="high-school">High School Student</option>
+              <option value="18-30">18 – 30</option>
+              <option value="31-50">31 – 50</option>
+              <option value="50+">50+</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="message">Message (optional)</label>
+            <textarea id="message" name="message" placeholder="Any questions? Let us know…"></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Claim My Free Class →</button>
+        </form>
+        <div class="form-success" id="form-success">
+          ✦ &nbsp; Thank you! We'll be in touch shortly to confirm your free class.
+        </div>
+      </div>
+      <div class="contact-info">
+        <span class="section-label">Get in Touch</span>
+        <h2>Contact Us</h2>
+        <div class="gold-rule"></div>
+        <p>Prefer to call or email? Reach out any time — we're happy to answer questions about Hapkido, the program, or what to expect from your first class.</p>
+        <div class="contact-detail">
+          <span class="contact-detail-icon">📞</span>
+          <div class="contact-detail-text">
+            <span class="label">Phone</span>
+            <a href="tel:0417241982">0417 241 982</a>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <span class="contact-detail-icon">✉️</span>
+          <div class="contact-detail-text">
+            <span class="label">Email</span>
+            <a href="mailto:hkd.jungshin@gmail.com">hkd.jungshin@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <span class="contact-detail-icon">📅</span>
+          <div class="contact-detail-text">
+            <span class="label">Training Night</span>
+            <span>Wednesdays at 5:30pm — Alstonville</span>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <span class="contact-detail-icon">📍</span>
+          <div class="contact-detail-text">
+            <span class="label">Location</span>
+            <span>Alstonville Uniting Church Hall<br>Entry off Main Street, Alstonville NSW</span>
+          </div>
+        </div>
+        <div class="social-row">
+          <img src="images/instagram-qr.png" alt="Instagram QR code for @jungshin.hapkido">
+          <div>
+            <p><strong style="color: var(--gold); font-family: 'Cinzel', serif; font-size: 0.75rem; letter-spacing: 0.1em;">Follow Us on Instagram</strong></p>
+            <p style="margin-top: 4px;">Scan the QR code or find us<br>@<strong>jungshin.hapkido</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <img src="images/logo.png" alt="Jung Shin Hapkido logo">
+  <p class="footer-tagline">Mind &nbsp;·&nbsp; Spirit &nbsp;·&nbsp; Attitude</p>
+  <div class="footer-links">
+    <a href="#hero">Home</a>
+    <a href="#principles">What is Hapkido</a>
+    <a href="#curriculum">What We Teach</a>
+    <a href="#instructor">Instructor</a>
+    <a href="#schedule">Schedule</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <p class="footer-copy">© 2020 Jung Shin Hapkido · Alstonville NSW · All rights reserved</p>
+</footer>
+
+<script>
+  // Mobile menu
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+  hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+  function closeMobile() { mobileMenu.classList.remove('open'); }
+
+  // Smooth nav highlight on scroll
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('main-nav');
+    nav.style.background = window.scrollY > 60 ? 'rgba(10,10,10,0.97)' : 'rgba(10,10,10,0.92)';
+  });
+
+  // Form submit handler
+  function handleSubmit(e) {
+    e.preventDefault();
+    document.getElementById('trial-form').style.display = 'none';
+    document.getElementById('form-success').style.display = 'block';
+  }
+
+  // Intersection observer for subtle fade-in
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(el => {
+      if (el.isIntersecting) {
+        el.target.style.opacity = '1';
+        el.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.principle-card, .curr-tile, .testi-card, .schedule-item').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>
